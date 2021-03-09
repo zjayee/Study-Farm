@@ -69,33 +69,25 @@ public class Task implements Comparable{
     public int compareTo(Object o) {
         //compares in terms of importance
         //returns -1 if this is less important, 0 if same, 1 if more important
-        //compares for important marker, then due date - estimated work days(from time needed), then task type
+        //compares for important marker, then due date
         Task t = (Task)o;
         if (this.getImportant() && t.getImportant()){
             if(this.getDueDate().after(t.getDueDate())){
-                return -1;
-            }else if(t.getDueDate().after(this.getDueDate())){
                 return 1;
+            }else if(t.getDueDate().after(this.getDueDate())){
+                return -1;
             }else{
-
-
-
+            return 0;
             }
+        }else if(this.getImportant()){
+            return 1;
+        }else if (t.getImportant()){
+            return -1;
+        }else{
+            return 0;
         }
-        return 0;
     }
-
-    public int estimateWorkDays(){
-        int minutes = this.getTimeNeeded();
-        int days = minutes/90 + 1;
-
-        if (this.getDaysUntilDeadline()<days){
-            days = getDaysUntilDeadline();
-        }
-
-        return days; //estimating 90 minutes of work per day max
-
-    }
+    
 
     public int getDaysUntilDeadline(){
         //TODO: implement
