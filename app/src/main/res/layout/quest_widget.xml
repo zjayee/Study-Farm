@@ -77,6 +77,7 @@
         android:layout_marginTop="-10dp"
         app:cardCornerRadius="10dp"
         app:cardBackgroundColor="@color/greycard"
+
         >
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -97,7 +98,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
-                android:text="x1 item item + x5 coins"
+                android:text="x1 related item + x5 coins"
+                style="@style/description_text"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="15dp"
 
                 />
 
