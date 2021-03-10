@@ -18,5 +18,11 @@
         <item name="android:textSize">22sp</item>
     </style>
 
+    <style name="thin_header_text_light">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/textlight1</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
 
 </resources>
