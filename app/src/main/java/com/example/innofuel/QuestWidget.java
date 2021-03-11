@@ -1,3 +1,4 @@
+package com.example.innofuel;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -6,14 +7,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 
-import com.example.innofuel.R;
+
 
 
 
 public class QuestWidget extends LinearLayout implements View.OnClickListener
 {
 
+    CardView rewardsCard;
+    CardView taskCard;
 
     public QuestWidget(Context context, @Nullable AttributeSet attrs, String questName, String questDescription, String questRewards, String completion) {
         super(context, attrs);
@@ -32,11 +36,36 @@ public class QuestWidget extends LinearLayout implements View.OnClickListener
         questRewardsTextview.setText(questRewards);
         completionTextview.setText(completion);
 
-        
+        rewardsCard = findViewById(R.id.rewardsCard);
+        //set as invisible
+        rewardsCard.setVisibility(GONE);
+
+        taskCard = findViewById(R.id.taskCard);
+
+
+        taskCard.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (rewardsCard.getVisibility()==GONE){
+                    rewardsCard.setVisibility(VISIBLE);
+                }else if(rewardsCard.getVisibility()==VISIBLE){
+                    rewardsCard.setVisibility(GONE);
+                }
+                System.out.println("clicked reward");
+
+            }
+        });
+
     }
 
     @Override
     public void onClick(View v) {
 
+
+
     }
+
+
+
 }
