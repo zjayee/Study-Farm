@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Innofuel</string>
+    <string name="current_tasks">Current Tasks</string>
+    <string name="active_quests">Active Quests</string>
+
+
 </resources>

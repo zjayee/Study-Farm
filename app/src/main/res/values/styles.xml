@@ -12,7 +12,7 @@
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="thin_header_text">
+    <style name="thin_header_22">
         <item name="android:fontFamily">@font/open_sans</item>
         <item name="android:textColor">@color/textdark1</item>
         <item name="android:textSize">22sp</item>
@@ -24,5 +24,10 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="thin_header_26">
+        <item name="android:fontFamily">@font/open_sans_light</item>
+        <item name="android:textColor">@color/textdark1</item>
+        <item name="android:textSize">26sp</item>
+    </style>
 
 </resources>

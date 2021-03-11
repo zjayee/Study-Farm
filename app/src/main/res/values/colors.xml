@@ -13,5 +13,9 @@
     <color name="textlight1">#94979E</color>
 
     <color name="greycard">#E4EAE3</color>
+    <color name="lightgreybackground">#F4F4F4</color>
+
+
+    <color name="highlightcolour">#B7D0B0</color>
 
 </resources>
