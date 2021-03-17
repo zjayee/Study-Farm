@@ -43,18 +43,15 @@ public class QuestWidget extends LinearLayout implements View.OnClickListener
         taskCard = findViewById(R.id.taskCard);
 
 
-        taskCard.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        taskCard.setOnClickListener(v -> {
 
-                if (rewardsCard.getVisibility()==GONE){
-                    rewardsCard.setVisibility(VISIBLE);
-                }else if(rewardsCard.getVisibility()==VISIBLE){
-                    rewardsCard.setVisibility(GONE);
-                }
-                System.out.println("clicked reward");
-
+            if (rewardsCard.getVisibility()==GONE){
+                rewardsCard.setVisibility(VISIBLE);
+            }else if(rewardsCard.getVisibility()==VISIBLE){
+                rewardsCard.setVisibility(GONE);
             }
+            System.out.println("clicked reward");
+
         });
 
     }
