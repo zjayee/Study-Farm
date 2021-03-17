@@ -11,11 +11,15 @@
     <color name="textdark1">#4E4E4E</color>
     <color name="textdark2">#454545</color>
     <color name="textlight1">#94979E</color>
+    <color name="textgreen">#8A9A86</color>
 
     <color name="greycard">#E4EAE3</color>
     <color name="lightgreybackground">#F4F4F4</color>
 
 
     <color name="highlightcolour">#B7D0B0</color>
+    <color name="checkboxgreen">#A6BBA0</color>
+
+    <color name="transparent">#00FFFFFF</color>
 
 </resources>
