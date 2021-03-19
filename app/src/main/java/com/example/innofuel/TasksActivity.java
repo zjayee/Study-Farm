@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class QuestsActivity extends AppCompatActivity {
+public class TasksActivity extends BaseActivity {
 
     FloatingActionButton addTaskButton;
 
@@ -14,13 +14,23 @@ public class QuestsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quests);
+        setContentView(R.layout.activity_tasks);
 
         setupViews();
         setupAddTaskButton();
 
 
 
+    }
+
+    @Override
+    int getLayoutId() {
+        return R.layout.activity_tasks;
+    }
+
+    @Override
+    int getBottomNavigationMenuItemId() {
+        return R.id.tasks;
     }
 
 

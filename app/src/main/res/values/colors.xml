@@ -18,6 +18,8 @@
 
 
     <color name="highlightcolour">#B7D0B0</color>
+    <color name="menuselectedgreen">#81937D</color>
+    <color name="menugreen">#BACAB6</color>
     <color name="checkboxgreen">#A6BBA0</color>
 
     <color name="transparent">#00FFFFFF</color>

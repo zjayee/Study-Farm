@@ -7,16 +7,26 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout
-        android:id="@+id/linearlayout"
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearlayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        >-->
+
+
+<!--    </LinearLayout>-->
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-
-
-    </LinearLayout>
-
-
+        android:text="home page"
+        android:textSize="30dp"
+        />
+    <include
+        layout="@layout/item_bottom_navigation"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

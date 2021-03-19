@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Innofuel">
-        <activity android:name=".QuestsActivity"></activity>
+        <activity android:name=".RewardsActivity"></activity>
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".TasksActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
