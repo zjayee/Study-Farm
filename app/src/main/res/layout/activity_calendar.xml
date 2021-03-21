@@ -4,6 +4,184 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalendarActivity">
+    tools:context=".CalendarActivity"
+    android:background="@color/lightgreybackground"
+    >
+
+
+
+    <include
+        android:id="@+id/bottomMenu"
+        layout="@layout/item_bottom_navigation"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/monthsCard"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:cardElevation="7dp"
+    app:layout_constraintBottom_toTopOf="@id/bottomMenu"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        >
+
+        <Button
+            android:id="@+id/januaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="Jan"
+            android:textColor="@color/textdark1"
+            />
+
+        <Button
+            android:id="@+id/febuaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="Feb"
+            android:textColor="@color/textdark1"
+            />
+
+        <Button
+            android:id="@+id/marchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="Mar"
+            android:textColor="@color/textdark1"
+            />
+
+        <Button
+            android:id="@+id/aprilButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="Apr"
+            android:textColor="@color/textdark1"
+            />
+
+        <Button
+            android:id="@+id/mayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="May"
+            android:textColor="@color/textdark1"
+            />
+
+        <Button
+            android:id="@+id/juneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="Jun"
+            android:textColor="@color/textdark1"
+            />
+
+        <Button
+            android:id="@+id/julyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="Jul"
+            android:textColor="@color/textdark1"
+            />
+
+        <Button
+            android:id="@+id/augustButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="Aug"
+            android:textColor="@color/textdark1"
+            />
+
+        <Button
+            android:id="@+id/septemberButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="Sep"
+            android:textColor="@color/textdark1"
+            />
+
+        <Button
+            android:id="@+id/octoberButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="oct"
+            android:textColor="@color/textdark1"
+            />
+        <Button
+            android:id="@+id/novemberButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="nov"
+            android:textColor="@color/textdark1"
+            />
+
+        <Button
+            android:id="@+id/decemberButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:text="dec"
+            android:textColor="@color/textdark1"
+            />
+
+
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+   <androidx.cardview.widget.CardView
+       android:id="@+id/calendarCard"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+       app:cardCornerRadius="20dp"
+       app:cardElevation="5dp"
+       >
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+   </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/calendarCard"
+        app:layout_constraintBottom_toTopOf="@id/bottomMenu"
+        app:layout_constraintLeft_toRightOf="@id/monthsCard"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,4 +10,5 @@
     app:labelVisibilityMode="unlabeled"
     app:itemIconSize="30dp"
     android:layout_gravity="bottom"
+    android:elevation="15dp"
     />
