@@ -21,13 +21,138 @@
 
 <androidx.cardview.widget.CardView
     android:id="@+id/monthsCard"
-    android:layout_width="wrap_content"
+    android:layout_width="70dp"
     android:layout_height="0dp"
     app:layout_constraintLeft_toLeftOf="parent"
     app:cardElevation="7dp"
     app:layout_constraintBottom_toTopOf="@id/bottomMenu"
     app:layout_constraintTop_toTopOf="parent"
     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="25dp"
+        android:paddingTop="25dp"
+
+        >
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="30dp"
+        >
+        <RadioButton
+            android:id="@+id/januaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/febuaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+            />
+        <RadioButton
+            android:id="@+id/marchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+
+            />
+        <RadioButton
+            android:id="@+id/aprilButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+
+            />
+        <RadioButton
+            android:id="@+id/mayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+
+            />
+        <RadioButton
+            android:id="@+id/juneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+
+            />
+        <RadioButton
+            android:id="@+id/julyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+
+            />
+        <RadioButton
+            android:id="@+id/augustButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+
+            />
+        <RadioButton
+            android:id="@+id/septemberButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+
+            />
+        <RadioButton
+            android:id="@+id/octoberButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+
+            />
+        <RadioButton
+            android:id="@+id/novemberButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+
+            />
+        <RadioButton
+            android:id="@+id/decemberButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/calendar_button"
+            android:buttonTint="@color/highlightcolour"
+
+            />
+
+
+
+    </RadioGroup>
+</LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -36,7 +161,7 @@
         >
 
         <Button
-            android:id="@+id/januaryButton"
+            android:id="@+id/january"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -46,7 +171,7 @@
             />
 
         <Button
-            android:id="@+id/febuaryButton"
+            android:id="@+id/febuary"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -56,7 +181,7 @@
             />
 
         <Button
-            android:id="@+id/marchButton"
+            android:id="@+id/march"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -66,7 +191,7 @@
             />
 
         <Button
-            android:id="@+id/aprilButton"
+            android:id="@+id/april"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -76,7 +201,7 @@
             />
 
         <Button
-            android:id="@+id/mayButton"
+            android:id="@+id/may"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -86,7 +211,7 @@
             />
 
         <Button
-            android:id="@+id/juneButton"
+            android:id="@+id/june"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -96,7 +221,7 @@
             />
 
         <Button
-            android:id="@+id/julyButton"
+            android:id="@+id/july"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -106,7 +231,7 @@
             />
 
         <Button
-            android:id="@+id/augustButton"
+            android:id="@+id/august"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -116,7 +241,7 @@
             />
 
         <Button
-            android:id="@+id/septemberButton"
+            android:id="@+id/september"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -126,7 +251,7 @@
             />
 
         <Button
-            android:id="@+id/octoberButton"
+            android:id="@+id/october"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -135,7 +260,7 @@
             android:textColor="@color/textdark1"
             />
         <Button
-            android:id="@+id/novemberButton"
+            android:id="@+id/november"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -145,7 +270,7 @@
             />
 
         <Button
-            android:id="@+id/decemberButton"
+            android:id="@+id/december"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -158,20 +283,24 @@
 
     </LinearLayout>
     </androidx.cardview.widget.CardView>
-   <androidx.cardview.widget.CardView
-       android:id="@+id/calendarCard"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       app:layout_constraintTop_toTopOf="parent"
-       app:cardCornerRadius="20dp"
-       app:cardElevation="5dp"
-       >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/calendarCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        >
+
+
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
    </androidx.cardview.widget.CardView>
 

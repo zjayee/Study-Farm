@@ -4,7 +4,7 @@
         android:drawable="@drawable/calendardot" /> <!-- pressed -->
     <item android:state_focused="true"
         android:drawable="@drawable/calendardot" /> <!-- focused -->
-    <item android:state_selected="true"
+    <item android:state_checked="true"
         android:drawable="@drawable/calendardot"
         />
     <item android:drawable="@drawable/transparent" /> <!-- default -->
