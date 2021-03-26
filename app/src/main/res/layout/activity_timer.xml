@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimerActivity"
+    android:background="@color/lightgreybackground"
+    >
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_back_button"
+        android:background="@drawable/transparent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/timerCard"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="25dp"
+        />
+
+
+    <TextView
+        android:id="@+id/taskTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/timerCard"
+        app:layout_constraintLeft_toLeftOf="@id/timerCard"
+        android:text="@string/task"
+        android:elevation="2dp"
+        style="@style/thin_header_26"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="13dp"
+        />
+
+    <TextView
+        android:id="@+id/taskNameTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/taskTextview"
+        app:layout_constraintLeft_toLeftOf="@id/taskTextview"
+        android:text="Study for my Biology Test"
+        android:elevation="2dp"
+        style="@style/thin_header_text_light"
+        />
+
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/taskNameTextview"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_divider"
+        android:elevation="2dp"
+        app:tint="@color/dividergreen"
+
+        />
+
+    <TextView
+        android:id="@+id/countdownTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintBottom_toBottomOf="@id/finishTaskButton"
+        app:layout_constraintLeft_toLeftOf="@id/timerCard"
+        app:layout_constraintRight_toRightOf="@id/timerCard"
+        android:text="12:58"
+        android:elevation="2dp"
+        style="@style/timer_text"
+        />
+
+
+    <Button
+        android:id="@+id/finishTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish Task"
+        style="@style/green_button"
+        app:layout_constraintBottom_toBottomOf="@id/timerCard"
+        app:layout_constraintLeft_toLeftOf="@id/timerCard"
+        app:layout_constraintRight_toRightOf="@id/timerCard"
+        android:layout_marginBottom="160dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
