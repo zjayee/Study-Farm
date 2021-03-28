@@ -23,10 +23,13 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/timerCard"
         android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardCornerRadius="25dp"
-        />
+        >
+
+    </androidx.cardview.widget.CardView>
 
 
     <TextView
@@ -40,6 +43,23 @@
         style="@style/thin_header_26"
         android:layout_marginLeft="33dp"
         android:layout_marginTop="13dp"
+        />
+
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="315dp"
+        android:layout_height="315dp"
+        app:layout_constraintTop_toTopOf="@id/countdownTextview"
+        app:layout_constraintBottom_toBottomOf="@id/countdownTextview"
+        app:layout_constraintLeft_toLeftOf="@id/countdownTextview"
+        app:layout_constraintRight_toRightOf="@id/countdownTextview"
+        android:elevation="2dp"
+        app:cpb_background_progressbar_color="@color/transparent"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_width="7dp"
+        app:cpb_progressbar_color="@color/highlightcolour"
+        app:cpb_progress="50"
         />
 
     <TextView
@@ -78,6 +98,18 @@
         style="@style/timer_text"
         />
 
+    <TextView
+        android:id="@+id/nextBreakTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/countdownTextview"
+        app:layout_constraintLeft_toLeftOf="@id/countdownTextview"
+        app:layout_constraintRight_toRightOf="@id/countdownTextview"
+        android:layout_marginTop="3dp"
+        android:text="Next Break: 12:05"
+        android:elevation="2dp"
+        style="@style/timer_small_text"
+        />
 
     <Button
         android:id="@+id/finishTaskButton"
@@ -88,7 +120,7 @@
         app:layout_constraintBottom_toBottomOf="@id/timerCard"
         app:layout_constraintLeft_toLeftOf="@id/timerCard"
         app:layout_constraintRight_toRightOf="@id/timerCard"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="120dp"
         />
 
 

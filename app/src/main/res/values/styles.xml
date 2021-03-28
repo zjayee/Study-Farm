@@ -46,7 +46,12 @@
         <item name="android:fontFamily">@font/open_sans_light</item>
         <item name="android:textColor">@color/textdark1</item>
         <item name="android:textSize">64sp</item>
+    </style>
 
+    <style name="timer_small_text">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/textgreen</item>
+        <item name="android:textSize">12sp</item>
 
     </style>
 
