@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.mikhaellopez.circularprogressbar.CircularProgressBar;
+
+import java.util.concurrent.TimeUnit;
 
 public class TimerActivity extends AppCompatActivity {
     //views
@@ -19,7 +22,7 @@ public class TimerActivity extends AppCompatActivity {
 
     //data
     Task currentTask;
-
+    long millisLeft;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +31,7 @@ public class TimerActivity extends AppCompatActivity {
 
         getIntentInfo();
         setupViews();
-
+        setupCountdown();
 
     }
 
@@ -49,6 +52,29 @@ public class TimerActivity extends AppCompatActivity {
         //TODO: set up timer initial time + break text
     }
 
+    void setupCountdown(){
+        CountDownTimer countdownTimer = new CountDownTimer(TimeUnit.MINUTES.toMillis(30), 1000) {
 
+            public void onTick(long millisUntilFinished) {
+                millisLeft = millisUntilFinished;
+
+                long minutes = TimeUnit.MILLISECONDS.toMinutes(millisLeft);
+                long seconds = TimeUnit.MILLISECONDS.toSeconds(millisLeft);
+
+                countdownTextview.setText(minutes+":"+seconds);
+            }
+
+            public void onFinish() {
+                //TODO: make noise
+            }
+
+
+        }.start();
+    }
+
+    void pauseCountdown(){
+
+
+    }
 
 }
