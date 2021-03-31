@@ -15,6 +15,8 @@ import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
 import java.util.concurrent.TimeUnit;
 
+import static android.os.SystemClock.sleep;
+
 public class TimerActivity extends AppCompatActivity {
     //views
     TextView taskNameTextview;
@@ -78,9 +80,11 @@ public class TimerActivity extends AppCompatActivity {
             }
 
             public void onFinish() {
-                mp.start();
+                mp.start();{
+                    sleep(5000);
+                    mp.stop();
+                }
 
-                //TODO: implement button that stops media player
             }
 
 
