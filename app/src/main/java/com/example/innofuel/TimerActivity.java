@@ -3,6 +3,9 @@ package com.example.innofuel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.Button;
@@ -19,10 +22,16 @@ public class TimerActivity extends AppCompatActivity {
     TextView nextBreakTextview;
     CircularProgressBar progressBar;
     Button finishTaskButton;
+    Button pauseButton;
 
     //data
     Task currentTask;
     long millisLeft;
+    boolean isPaused;
+
+    //other
+    MediaPlayer mp;
+    CountDownTimer countdownTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +40,7 @@ public class TimerActivity extends AppCompatActivity {
 
         getIntentInfo();
         setupViews();
-        setupCountdown();
+        startCountdown(TimeUnit.MINUTES.toMillis(30));
 
     }
 
@@ -52,8 +61,12 @@ public class TimerActivity extends AppCompatActivity {
         //TODO: set up timer initial time + break text
     }
 
-    void setupCountdown(){
-        CountDownTimer countdownTimer = new CountDownTimer(TimeUnit.MINUTES.toMillis(30), 1000) {
+    void startCountdown(long millis){
+
+        Uri alarmSound = RingtoneManager. getDefaultUri (RingtoneManager. TYPE_ALARM);
+        mp = MediaPlayer. create (getApplicationContext(), alarmSound);
+
+        countdownTimer = new CountDownTimer(millis, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 millisLeft = millisUntilFinished;
@@ -65,7 +78,9 @@ public class TimerActivity extends AppCompatActivity {
             }
 
             public void onFinish() {
-                //TODO: make noise
+                mp.start();
+
+                //TODO: implement button that stops media player
             }
 
 
@@ -73,7 +88,12 @@ public class TimerActivity extends AppCompatActivity {
     }
 
     void pauseCountdown(){
+        countdownTimer.cancel();
 
+    }
+
+    void resumeCountdown(){
+        startCountdown(millisLeft);
 
     }
 
