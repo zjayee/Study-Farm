@@ -93,7 +93,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="18dp"
                 android:text="Rewards"
-                style="@style/thin_header_text_light"
+                style="@style/thin_header_text_light1"
                 />
 
             <TextView

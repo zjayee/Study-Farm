@@ -4,6 +4,11 @@
     <string name="active_quests">Active Quests</string>
 
     <string name="task">Task:</string>
+    <string name="add_task">Add Task</string>
+    <string name="title">Title</string>
+    <string name="duration">Duration</string>
+    <string name="complete_before_specific_date">Complete before specific date</string>
+    <string name="save">Save</string>
 
 
 </resources>
