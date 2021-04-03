@@ -9,6 +9,8 @@
     <string name="duration">Duration</string>
     <string name="complete_before_specific_date">Complete before specific date</string>
     <string name="save">Save</string>
+    <string name="reflect">Reflect</string>
+    <string name="suggested_quests">Suggested Quests</string>
 
 
 </resources>

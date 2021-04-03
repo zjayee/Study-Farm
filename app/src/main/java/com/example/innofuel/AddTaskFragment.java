@@ -31,17 +31,12 @@ public class AddTaskFragment extends Fragment {
      * @return A new instance of fragment AddTaskFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AddTaskFragment newInstance(String param1, String param2) {
+    public static AddTaskFragment newInstance() {
         AddTaskFragment fragment = new AddTaskFragment();
 
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
