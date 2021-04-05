@@ -74,6 +74,46 @@
                 style="@style/thin_header_text_green_20"
                 />
 
+            <NumberPicker
+                android:id="@+id/hourNumberPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                app:layout_constraintTop_toTopOf="@id/durationTextview"
+                app:layout_constraintLeft_toRightOf="@id/durationTextview"
+                android:layout_marginLeft="25dp"
+                />
+            <TextView
+                android:id="@+id/hourTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="h"
+                app:layout_constraintTop_toTopOf="@id/hourNumberPicker"
+                app:layout_constraintBottom_toBottomOf="@id/hourNumberPicker"
+                app:layout_constraintLeft_toRightOf="@id/hourNumberPicker"
+                style="@style/thin_header_text_green_18"
+                android:layout_marginLeft="10dp"
+                />
+
+            <NumberPicker
+                android:id="@+id/minuteNumberPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                app:layout_constraintTop_toTopOf="@id/durationTextview"
+                app:layout_constraintLeft_toRightOf="@id/hourTextview"
+                android:layout_marginLeft="30dp"
+                />
+            <TextView
+                android:id="@+id/minuteTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="min"
+                app:layout_constraintTop_toTopOf="@id/minuteNumberPicker"
+                app:layout_constraintBottom_toBottomOf="@id/minuteNumberPicker"
+                app:layout_constraintLeft_toRightOf="@id/minuteNumberPicker"
+                style="@style/thin_header_text_green_18"
+                android:layout_marginLeft="10dp"
+                />
+
             <CheckBox
                 android:id="@+id/dateCheckbox"
                 android:layout_width="wrap_content"

@@ -6,6 +6,12 @@
         <item name="android:textSize">22sp</item>
     </style>
 
+    <style name="small_header_text_white">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
     <style name="description_text">
         <item name="android:fontFamily">@font/open_sans_light</item>
         <item name="android:textColor">@color/textdark2</item>
@@ -86,6 +92,19 @@
         <item name="android:paddingLeft">55dp</item>
         <item name="android:paddingRight">55dp</item>
         <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="calendar_weekday">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/textgreen</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="calendar_date">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/date_selector</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="calendar_month_buttom">

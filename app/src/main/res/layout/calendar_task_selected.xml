@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="13dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/highlightcolour"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+
+                android:id="@+id/dateTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/small_header_text_white"
+                android:text="Febuary 16"
+                android:layout_marginTop="19dp"
+                android:layout_marginLeft="37dp"
+                />
+
+            <TextView
+                android:id="@+id/descriptionTextview"
+                app:layout_constraintTop_toBottomOf="@id/dateTextview"
+                app:layout_constraintLeft_toLeftOf="@id/dateTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/description_text"
+                android:textColor="@color/white"
+                android:text="Biology test"
+                android:paddingBottom="15dp"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_alarmon"
+                android:backgroundTint="@color/transparent"
+                android:tint="@color/white"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="match_parent"
+            android:background="@color/darkgreen"
+            />
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
