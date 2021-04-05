@@ -29,6 +29,7 @@
         app:cardCornerRadius="25dp"
         >
 
+
     </androidx.cardview.widget.CardView>
 
 
@@ -120,8 +121,34 @@
         app:layout_constraintBottom_toBottomOf="@id/timerCard"
         app:layout_constraintLeft_toLeftOf="@id/timerCard"
         app:layout_constraintRight_toRightOf="@id/timerCard"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="130dp"
         />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pause"
+        app:layout_constraintTop_toBottomOf="@id/finishTaskButton"
+        app:layout_constraintLeft_toLeftOf="@id/finishTaskButton"
+        style="@style/small_green_button"
+        android:layout_marginTop="5dp"
+        />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/pauseButton"
+        app:layout_constraintBottom_toBottomOf="@id/pauseButton"
+        app:layout_constraintRight_toRightOf="@id/finishTaskButton"
+        android:layout_marginLeft="20dp"
+        android:text="X"
+        android:elevation="2dp"
+        android:tint="@color/white"
+        style="@style/small_green_button"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
