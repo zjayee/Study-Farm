@@ -168,6 +168,8 @@
             android:background="@drawable/transparent"
             android:text="Jan"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
         <Button
@@ -178,6 +180,8 @@
             android:background="@drawable/transparent"
             android:text="Feb"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
         <Button
@@ -188,6 +192,8 @@
             android:background="@drawable/transparent"
             android:text="Mar"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
         <Button
@@ -198,6 +204,8 @@
             android:background="@drawable/transparent"
             android:text="Apr"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
         <Button
@@ -208,6 +216,8 @@
             android:background="@drawable/transparent"
             android:text="May"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
         <Button
@@ -218,6 +228,8 @@
             android:background="@drawable/transparent"
             android:text="Jun"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
         <Button
@@ -228,6 +240,8 @@
             android:background="@drawable/transparent"
             android:text="Jul"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
         <Button
@@ -238,6 +252,8 @@
             android:background="@drawable/transparent"
             android:text="Aug"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
         <Button
@@ -248,6 +264,8 @@
             android:background="@drawable/transparent"
             android:text="Sep"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
         <Button
@@ -258,6 +276,8 @@
             android:background="@drawable/transparent"
             android:text="oct"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
         <Button
             android:id="@+id/november"
@@ -267,6 +287,8 @@
             android:background="@drawable/transparent"
             android:text="nov"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
         <Button
@@ -277,6 +299,8 @@
             android:background="@drawable/transparent"
             android:text="dec"
             android:textColor="@color/textdark1"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="15sp"
             />
 
 
