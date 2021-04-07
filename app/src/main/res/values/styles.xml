@@ -12,10 +12,22 @@
         <item name="android:textSize">22sp</item>
     </style>
 
-    <style name="description_text">
+    <style name="semibold_header_text_26">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/textdark1</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="description_text_16">
         <item name="android:fontFamily">@font/open_sans_light</item>
         <item name="android:textColor">@color/textdark2</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="description_text_20">
+        <item name="android:fontFamily">@font/open_sans_light</item>
+        <item name="android:textColor">@color/textdark2</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="thin_header_22">
@@ -72,6 +84,8 @@
         <item name="android:textSize">12sp</item>
 
     </style>
+
+
 
     <style name="button_small">
         <item name="android:fontFamily">@font/open_sans_semibold</item>

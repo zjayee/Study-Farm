@@ -27,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingBottom="20dp"
         >
 
       <androidx.cardview.widget.CardView
@@ -131,11 +132,72 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             app:cardCornerRadius="10dp"
             android:layout_marginTop="5dp"
-            />
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/highlightcolour"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/alarmIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:src="@drawable/ic_alarm"
+                android:layout_marginTop="29dp"
+                android:layout_marginLeft="25dp"
+                />
+
+            <TextView
+                android:id="@+id/reminderTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/alarmIcon"
+                app:layout_constraintLeft_toRightOf="@id/alarmIcon"
+                android:layout_marginLeft="10dp"
+                android:text="@string/reminder"
+                style="@style/semibold_header_text_26"
+                />
+
+                <ImageButton
+                    android:id="@+id/thumbsupButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintTop_toTopOf="@id/alarmIcon"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="33dp"
+                    android:src="@drawable/ic_thumbsup"
+                    android:backgroundTint="@color/transparent"
+                    />
+
+                <TextView
+                    android:id="@+id/reminderDescriptionTextview"
+                    android:layout_width="278dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/reminderTextview"
+                    app:layout_constraintLeft_toLeftOf="@id/alarmIcon"
+                    android:layout_marginTop="5dp"
+                    android:text="Biology Test: 2 Days"
+                    style="@style/description_text_20"
+                    android:layout_marginLeft="3dp"
+                    android:paddingBottom="20dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -144,7 +206,18 @@
             app:cardCornerRadius="10dp"
             android:layout_marginTop="10dp"
             >
-        <!-- TODO: add calendar -->
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:mcv_arrowColor="@color/highlightcolour"
+            app:mcv_tileHeight="51dp"
+            app:mcv_headerTextAppearance="@style/thin_header_22"
+            app:mcv_weekDayTextAppearance="@style/calendar_weekday"
+            app:mcv_dateTextAppearance="@style/calendar_date"
+            android:layout_marginHorizontal="10dp"
+            />
+
 
         </androidx.cardview.widget.CardView>
 
@@ -154,16 +227,115 @@
             android:text="@string/suggested_quests"
             style="@style/thin_header_26"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="10dp"
             app:cardCornerRadius="10dp"
-            />
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/highlightcolour"
+                />
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_marginTop="15dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingBottom="20dp"
+               >
+
+               <TextView
+                   android:id="@+id/quest1NameTextview"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   android:layout_marginTop="20dp"
+                   android:layout_marginLeft="20dp"
+                   android:text="Farm For Berries"
+                   style="@style/small_header_text"
+                   />
+
+               <TextView
+                   android:id="@+id/quest1DescriptionTextview"
+                   android:layout_width="250dp"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toBottomOf="@id/quest1NameTextview"
+                   app:layout_constraintLeft_toLeftOf="@id/quest1NameTextview"
+                   android:layout_marginTop="5dp"
+                   android:text="Study for total of 2 hours"
+                   style="@style/description_text_16"
+
+                   />
+
+               <TextView
+                   android:id="@+id/quest1CompletionTextview"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toTopOf="@id/quest1NameTextview"
+                   app:layout_constraintRight_toRightOf="parent"
+                   android:layout_marginRight="33dp"
+                   android:layout_marginTop="15dp"
+                   android:text="1/2"
+                   style="@style/thin_header_22"
+                   />
+
+               <ImageView
+                   android:id="@+id/divider"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toBottomOf="@id/quest1DescriptionTextview"
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/ic_divider"
+                   />
+
+               <TextView
+                   android:id="@+id/quest2NameTextview"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toBottomOf="@id/divider"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   android:layout_marginTop="20dp"
+                   android:layout_marginLeft="20dp"
+                   android:text="Chop Some Wood"
+                   style="@style/small_header_text"
+                   />
+
+               <TextView
+                   android:id="@+id/quest2DescriptionTextview"
+                   android:layout_width="250dp"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toBottomOf="@id/quest2NameTextview"
+                   app:layout_constraintLeft_toLeftOf="@id/quest2NameTextview"
+                   android:layout_marginTop="5dp"
+                   android:text="Study 3 days in a row before your next test"
+                   style="@style/description_text_16"
+
+                   />
+
+               <TextView
+                   android:id="@+id/quest2CompletionTextview"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toTopOf="@id/quest2NameTextview"
+                   app:layout_constraintRight_toRightOf="parent"
+                   android:layout_marginRight="33dp"
+                   android:layout_marginTop="15dp"
+                   android:text="1/3"
+                   style="@style/thin_header_22"
+                   />
+
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
     </ScrollView>
