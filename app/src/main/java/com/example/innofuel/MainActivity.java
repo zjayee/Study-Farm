@@ -13,6 +13,7 @@ public class MainActivity extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_main);
+        setupNavigationView();
 
 //        QuestWidget questWidget = new QuestWidget(this, null, "quest name", " sfdg"," sdge","3/10");
 //        LinearLayout linearLayout = findViewById(R.id.linearlayout);

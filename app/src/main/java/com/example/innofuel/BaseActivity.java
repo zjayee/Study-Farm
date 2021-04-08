@@ -13,15 +13,10 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
 
     protected BottomNavigationView navigationView;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(getLayoutId());
-
+    protected void setupNavigationView(){
         navigationView = (BottomNavigationView) findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
     }
-
     @Override
     protected void onStart() {
         super.onStart();
