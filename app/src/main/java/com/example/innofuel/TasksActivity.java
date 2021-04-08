@@ -14,7 +14,7 @@ public class TasksActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tasks);
+//        setContentView(R.layout.activity_tasks);
 
         setupViews();
         setupAddTaskButton();

@@ -9,7 +9,7 @@ public class RewardsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rewards);
+//        setContentView(R.layout.activity_rewards);
     }
 
     @Override
