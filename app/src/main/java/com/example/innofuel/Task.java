@@ -7,16 +7,16 @@ public class Task implements Comparable{
     private String name;
     private Date dueDate; //for regular tasks without due dates, user chooses a date they wish for it to be done
     private Integer timeNeeded; //minutes
-    private Boolean important;
-    private TaskType taskType;
 
 
-    Task(String name, Date dueDate, Integer timeNeeded, Boolean important, TaskType taskType){
+
+
+    Task(String name, Date dueDate, Integer timeNeeded){
         this.name = name;
         this.dueDate = dueDate;
         this.timeNeeded = timeNeeded;
-        this.important = important;
-        this.taskType = taskType;
+
+
     }
 
 
@@ -30,25 +30,15 @@ public class Task implements Comparable{
         return dueDate;
     }
 
-    public Boolean getImportant() {
-        return important;
-    }
-
     public Integer getTimeNeeded() {
         return timeNeeded;
     }
 
-    public TaskType getTaskType() {
-        return taskType;
-    }
+
 
     //set methods
     public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
-    }
-
-    public void setImportant(Boolean important) {
-        this.important = important;
     }
 
     public void setName(String name) {
@@ -59,19 +49,16 @@ public class Task implements Comparable{
         this.timeNeeded = timeNeeded;
     }
 
-    public void setTaskType(TaskType taskType) {
-        this.taskType = taskType;
-    }
 
     @Override
 
 
     public int compareTo(Object o) {
-        //compares in terms of importance
+
         //returns -1 if this is less important, 0 if same, 1 if more important
-        //compares for important marker, then due date
+        //compares for due date
         Task t = (Task)o;
-        if (this.getImportant() && t.getImportant()){
+
             if(this.getDueDate().after(t.getDueDate())){
                 return 1;
             }else if(t.getDueDate().after(this.getDueDate())){
@@ -79,13 +66,7 @@ public class Task implements Comparable{
             }else{
             return 0;
             }
-        }else if(this.getImportant()){
-            return 1;
-        }else if (t.getImportant()){
-            return -1;
-        }else{
-            return 0;
-        }
+
     }
 
 
