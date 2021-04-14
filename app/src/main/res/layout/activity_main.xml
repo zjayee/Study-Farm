@@ -115,6 +115,7 @@
       </androidx.cardview.widget.CardView>
 
         <Button
+            android:id="@+id/reflectButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
@@ -200,6 +201,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/calendarCard"
             android:layout_width="match_parent"
             android:layout_height="325dp"
             android:layout_marginHorizontal="15dp"
@@ -208,14 +210,15 @@
             >
         <com.prolificinteractive.materialcalendarview.MaterialCalendarView
             android:id="@+id/calendar"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             app:mcv_arrowColor="@color/highlightcolour"
-            app:mcv_tileHeight="51dp"
+            app:mcv_tileHeight="45dp"
             app:mcv_headerTextAppearance="@style/thin_header_22"
             app:mcv_weekDayTextAppearance="@style/calendar_weekday"
             app:mcv_dateTextAppearance="@style/calendar_date"
             android:layout_marginHorizontal="10dp"
+            app:mcv_selectionColor="@color/transparent"
             />
 
 

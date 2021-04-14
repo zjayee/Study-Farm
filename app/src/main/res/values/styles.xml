@@ -18,6 +18,12 @@
         <item name="android:textSize">26sp</item>
     </style>
 
+    <style name="semibold_header_text_24">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/textdark1</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
     <style name="description_text_16">
         <item name="android:fontFamily">@font/open_sans_light</item>
         <item name="android:textColor">@color/textdark2</item>
