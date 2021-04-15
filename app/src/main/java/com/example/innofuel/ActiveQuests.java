@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class ActiveQuests {
 
-    //data
-    ArrayList<Task> questList;
+
+    ArrayList<Quest> questList;
 
     private static ActiveQuests Instance = new ActiveQuests();
 
@@ -18,15 +18,16 @@ public class ActiveQuests {
         return(Instance);
     }
 
-    public void addQuest(Task task){
-        questList.add(task);
+    public void addQuest(Quest quest){
+        questList.add(quest);
     }
 
-    public void finishQuest(Task task){
-        questList.remove(task);
+    public void finishQuest(Quest quest){
+        questList.remove(quest);
+        //TODO: generate new quest
     }
 
-    public ArrayList<Task> getQuestList() {
+    public ArrayList<Quest> getQuestList() {
         return questList;
     }
 
