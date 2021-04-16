@@ -47,6 +47,7 @@ public class MainActivity extends BaseActivity{
     //data
     int reminderIndex = 0;
     ArrayList<Task> tasks;
+    ArrayList<Quest> quests;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,8 @@ public class MainActivity extends BaseActivity{
         setupCalendarCard();
         setupQuestCard();
         setupDate();
-        setupReminder();
+        //setupReminder();
+        //setupSuggestedQuests();
 
     }
 
@@ -165,6 +167,13 @@ public class MainActivity extends BaseActivity{
 
         String taskDetails = taskName + ": " + taskDueDate;
         reminderDescriptionTextview.setText(taskDetails);
+
+        thumbsupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismissTask();
+            }
+        });
     }
 
     void refreshReminder(){
@@ -188,6 +197,33 @@ public class MainActivity extends BaseActivity{
             //if no more tasks, dismiss card
             reminderCard.setVisibility(View.GONE);
         }
+    }
+
+    void setupSuggestedQuests(){
+        quests = ActiveQuests.getInstance().getQuestList();
+        Quest quest1 = quests.get(0);
+        Quest quest2 = quests.get(1);
+
+        //get names
+        String quest1name = quest1.getName();
+        String quest2name = quest2.getName();
+        //set name textview
+        quest1NameTextview.setText(quest1name);
+        quest2NameTextview.setText(quest2name);
+
+        //get descriptions
+        String quest1details = quest1.getDetails();
+        String quest2details = quest2.getDetails();
+        //set name textview
+        quest2DescriptionTextview.setText(quest1details);
+        quest2DescriptionTextview.setText(quest2details);
+
+        //get completion
+        String quest1completion = quest1.getCompletion();
+        String quest2completion = quest2.getCompletion();
+        //set completion
+        quest1CompletionTextview.setText(quest1completion);
+        quest2CompletionTextview.setText(quest2completion);
 
     }
 
