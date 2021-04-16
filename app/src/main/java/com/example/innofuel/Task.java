@@ -1,8 +1,11 @@
 package com.example.innofuel;
 
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class Task implements Comparable{
+public class Task implements Comparable, Serializable {
 
     private String name;
     private Date dueDate; //for regular tasks without due dates, user chooses a date they wish for it to be done
@@ -32,6 +35,21 @@ public class Task implements Comparable{
 
     public Integer getTimeNeeded() {
         return timeNeeded;
+    }
+
+    public String getTimeString(){
+        if(timeNeeded<60){
+            return timeNeeded + "min";
+        }else if(timeNeeded%60 == 0){
+            return  timeNeeded/60 + "hr";
+        }else{
+            int min = timeNeeded%60;
+            int hr = timeNeeded/60;
+
+            return hr+" hr "+min+" min";
+        }
+
+
     }
 
 

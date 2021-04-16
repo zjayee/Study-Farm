@@ -8,7 +8,7 @@
         android:id="@+id/checkbox"
         android:layout_width="26dp"
         android:layout_height="26dp"
-        app:layout_constraintTop_toTopOf="@id/taskText"
+        app:layout_constraintTop_toTopOf="@id/taskTextview"
         android:layout_marginTop="5dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:buttonTint="@color/checkboxgreen"
@@ -17,7 +17,7 @@
         />
 
     <TextView
-        android:id="@+id/taskText"
+        android:id="@+id/taskTextview"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,11 +28,11 @@
         />
 
     <TextView
-        android:id="@+id/timeText"
+        android:id="@+id/timeTextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/taskText"
-        app:layout_constraintLeft_toLeftOf="@id/taskText"
+        app:layout_constraintTop_toBottomOf="@id/taskTextview"
+        app:layout_constraintLeft_toLeftOf="@id/taskTextview"
         android:text="1hr"
         style="@style/thin_header_text_light1"
         />

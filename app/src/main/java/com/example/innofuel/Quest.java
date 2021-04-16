@@ -1,5 +1,9 @@
 package com.example.innofuel;
 
+import android.util.Pair;
+
+import java.util.ArrayList;
+
 public class Quest {
 
     //variables
@@ -11,8 +15,8 @@ public class Quest {
     private int total;
     private String completion;
     //reward
-    private Rewards rewardType;
-    private int quantity;
+    ArrayList<Pair<Rewards, Integer>> rewards;
+
 
     Quest(){
 
@@ -41,12 +45,27 @@ public class Quest {
         return completion;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public ArrayList<Pair<Rewards, Integer>> getRewards() {
+        return rewards;
     }
 
-    public Rewards getRewardType() {
-        return rewardType;
+    public String getRewardString(){
+        String rewardString = "";
+
+        for(int i = 0; i< rewards.size(); i++) {
+            Pair item = rewards.get(i);
+            String itemString;
+
+            if(i == 0){
+                itemString = "x"+item.second+" "+item.first;
+                rewardString+= itemString;
+            }else{
+                itemString = "x"+item.second+" "+item.first;
+                rewardString+= " + "+ itemString;
+
+            }
+        }
+        return rewardString;
     }
 }
 

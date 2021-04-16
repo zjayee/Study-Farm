@@ -19,7 +19,7 @@ public class QuestWidget extends LinearLayout implements View.OnClickListener
     CardView rewardsCard;
     CardView taskCard;
 
-    public QuestWidget(Context context, @Nullable AttributeSet attrs, String questName, String questDescription, String questRewards, String completion) {
+    public QuestWidget(Context context, @Nullable AttributeSet attrs, Quest quest) {
         super(context, attrs);
 
         //inflate layout
@@ -30,6 +30,11 @@ public class QuestWidget extends LinearLayout implements View.OnClickListener
         TextView questDescriptionTextview = findViewById(R.id.questDescription);
         TextView questRewardsTextview = findViewById(R.id.rewardsText);
         TextView completionTextview = findViewById(R.id.completionText);
+
+        String questName = quest.getName();
+        String questDescription = quest.getDetails();
+        String questRewards = quest.getRewardString();
+        String completion = quest.getCompletion();
 
         questNameTextview.setText(questName);
         questDescriptionTextview.setText(questDescription);
