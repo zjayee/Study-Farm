@@ -11,7 +11,9 @@ public class ActiveQuests {
 
     private ActiveQuests(){
         questList = new ArrayList<>();
-
+        questList.add(Quest.generateQuest());
+        questList.add(Quest.generateQuest());
+        questList.add(Quest.generateQuest());
     };
 
     public static ActiveQuests getInstance() {
@@ -24,7 +26,7 @@ public class ActiveQuests {
 
     public void finishQuest(Quest quest){
         questList.remove(quest);
-        //TODO: generate new quest
+        questList.add(Quest.generateQuest());
     }
 
     public ArrayList<Quest> getQuestList() {

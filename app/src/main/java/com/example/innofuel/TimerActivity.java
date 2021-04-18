@@ -8,6 +8,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -25,11 +26,12 @@ public class TimerActivity extends AppCompatActivity {
     CircularProgressBar progressBar;
     Button finishTaskButton;
     Button pauseButton;
+    Button cancelButton;
 
     //data
     Task currentTask;
     long millisLeft;
-    boolean isPaused;
+    boolean isPaused = false;
 
     //other
     MediaPlayer mp;
@@ -38,7 +40,7 @@ public class TimerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_timer);
+        setContentView(R.layout.activity_timer);
 
         getIntentInfo();
         setupViews();
@@ -58,9 +60,42 @@ public class TimerActivity extends AppCompatActivity {
         nextBreakTextview = findViewById(R.id.nextBreakTextview);
         progressBar = findViewById(R.id.progressBar);
         finishTaskButton = findViewById(R.id.finishTaskButton);
+        pauseButton = findViewById(R.id.pauseButton);
+        cancelButton = findViewById(R.id.cancelButton);
 
         taskNameTextview.setText(currentTask.getName());
         //TODO: set up timer initial time + break text
+
+        pauseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isPaused==false){
+                    pauseCountdown();
+                    pauseButton.setText(R.string.resume);
+                    isPaused=true;
+                }else if(isPaused==true){
+                    resumeCountdown();
+                    pauseButton.setText(R.string.pause);
+                    isPaused=false;
+                }
+            }
+
+        });
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countdownTimer.cancel();
+            }
+        });
+
+        finishTaskButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO: set task as finished
+            }
+        });
+
     }
 
     void startCountdown(long millis){
