@@ -39,6 +39,7 @@
                 />
 
             <ImageButton
+                android:id="@+id/exitButton"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 app:layout_constraintTop_toTopOf="@id/addTaskTextview"
@@ -127,7 +128,7 @@
                 />
 
             <EditText
-                android:id="@+id/editTextDate"
+                android:id="@+id/dateEditText"
                 app:layout_constraintTop_toBottomOf="@id/dateCheckbox"
                 app:layout_constraintLeft_toLeftOf="@id/durationTextview"
                 android:layout_width="wrap_content"

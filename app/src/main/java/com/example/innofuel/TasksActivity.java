@@ -2,8 +2,13 @@ package com.example.innofuel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.NumberPicker;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -25,7 +30,6 @@ public class TasksActivity extends BaseActivity {
 
         setupViews();
         setupAddTaskButton();
-
         setupQuestsList();
 
 
@@ -53,6 +57,29 @@ public class TasksActivity extends BaseActivity {
     void setupAddTaskButton(){
         addTaskButton.setOnClickListener(v ->{
             //TODO: add task fragment
+
+
+            final Dialog addTaskDialogue = new Dialog(this);
+            addTaskDialogue.setContentView(R.layout.fragment_add_task);
+            addTaskDialogue.setCancelable(true);
+            addTaskDialogue.show();
+
+            Button exitButton = addTaskDialogue.findViewById(R.id.exitButton);
+            EditText titleEditText = addTaskDialogue.findViewById(R.id.titleEditText);
+            NumberPicker hourNumberPicker = addTaskDialogue.findViewById(R.id.hourNumberPicker);
+            NumberPicker minuteNumberPicker = addTaskDialogue.findViewById(R.id.minuteNumberPicker);
+            EditText dateEditText = addTaskDialogue.findViewById(R.id.dateEditText);
+
+            
+
+            exitButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    addTaskDialogue.dismiss();
+                }
+            });
+
+
 
         } );
 
