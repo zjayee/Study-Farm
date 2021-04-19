@@ -54,16 +54,14 @@ public class MainActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
 //       setContentView(R.layout.activity_main);
 
-//        QuestWidget questWidget = new QuestWidget(this, null, "quest name", " sfdg"," sdge","3/10");
-//        LinearLayout linearLayout = findViewById(R.id.linearlayout);
-//        linearLayout.addView(questWidget);
+
 
         setupViews();
         setupCalendarCard();
         setupQuestCard();
         setupDate();
         //setupReminder();
-        //setupSuggestedQuests();
+        setupSuggestedQuests();
 
     }
 
@@ -200,7 +198,7 @@ public class MainActivity extends BaseActivity{
     }
 
     void setupSuggestedQuests(){
-        quests = ActiveQuests.getInstance().getQuestList();
+        quests = ActiveQuests.getQuestList();
         Quest quest1 = quests.get(0);
         Quest quest2 = quests.get(1);
 

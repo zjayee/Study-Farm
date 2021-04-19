@@ -5,12 +5,11 @@ import java.util.ArrayList;
 public class ActiveQuests {
 
 
-    ArrayList<Quest> questList;
+    private static ArrayList<Quest> questList = new ArrayList<>();
 
     private static ActiveQuests Instance = new ActiveQuests();
 
     private ActiveQuests(){
-        questList = new ArrayList<>();
         questList.add(Quest.generateQuest());
         questList.add(Quest.generateQuest());
         questList.add(Quest.generateQuest());
@@ -29,7 +28,7 @@ public class ActiveQuests {
         questList.add(Quest.generateQuest());
     }
 
-    public ArrayList<Quest> getQuestList() {
+    public static ArrayList<Quest> getQuestList() {
         return questList;
     }
 

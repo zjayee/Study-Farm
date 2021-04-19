@@ -19,8 +19,8 @@ public class QuestWidget extends LinearLayout implements View.OnClickListener
     CardView rewardsCard;
     CardView taskCard;
 
-    public QuestWidget(Context context, @Nullable AttributeSet attrs, Quest quest) {
-        super(context, attrs);
+    public QuestWidget(Context context, Quest quest) {
+        super(context);
 
         //inflate layout
         LayoutInflater inflater = LayoutInflater.from(context);

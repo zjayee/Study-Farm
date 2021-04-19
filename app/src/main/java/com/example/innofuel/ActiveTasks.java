@@ -6,12 +6,12 @@ import java.util.Collections;
 
 public class ActiveTasks {
 
-    private ArrayList<Task> taskList;
+    private ArrayList<Task> taskList = new ArrayList<>();
 
     private static ActiveTasks Instance = new ActiveTasks();
 
     private ActiveTasks(){
-        taskList = new ArrayList<>();
+        
 
     };
 

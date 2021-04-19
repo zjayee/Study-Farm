@@ -3,6 +3,7 @@ package com.example.innofuel;
 import android.util.Pair;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Quest {
 
@@ -27,12 +28,14 @@ public class Quest {
     }
 
     public static Quest generateQuest(){
-        int random = (int)Math.random()*QuestList.size();
+        int random = (int) (Math.random() * QuestList.size());
         Quest quest = QuestList.get(random);
-        while(ActiveQuests.getInstance().questList.contains(quest)){
-            random = (int)Math.random()*QuestList.size();
-            quest = QuestList.get(random);
-        }
+
+            while (ActiveQuests.getQuestList().contains(quest)) {
+                random = (int) Math.random() * QuestList.size();
+                quest = QuestList.get(random);
+            }
+
         return quest;
     }
 
@@ -69,15 +72,27 @@ public class Quest {
             String itemString;
 
             if(i == 0){
-                itemString = "x"+item.second+" "+item.first;
+                itemString = "x"+item.second+" "+rewardToString((Rewards) item.first);
                 rewardString+= itemString;
             }else{
-                itemString = "x"+item.second+" "+item.first;
+                itemString = "x"+item.second+" "+rewardToString((Rewards) item.first);
                 rewardString+= " + "+ itemString;
 
             }
         }
         return rewardString;
+    }
+
+    public String rewardToString(Rewards rewards){
+        String rewardString = rewards.toString();
+        while(rewardString.contains("_")){
+            int index = rewardString.indexOf("_");
+            char[] rewardchar = rewardString.toCharArray();
+            rewardchar[index] = ' ';
+            rewardString = String.valueOf(rewardchar);
+        }
+        return rewardString;
+
     }
 
     static Pair<Rewards, Integer> woodenItem1 = new Pair<>(Rewards.random_wooden_item, 1);
