@@ -24,7 +24,7 @@
     <string name="thu">Thu</string>
     <string name="fri">Fri</string>
     <string name="sat">Sat</string>
-
+    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
 
 
 </resources>

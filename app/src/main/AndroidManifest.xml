@@ -14,7 +14,9 @@
         <activity android:name=".CalendarActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".BaseActivity" />
-        <activity android:name=".TasksActivity" />
+        <activity android:name=".TasksActivity"
+            android:windowSoftInputMode="adjustNothing"
+            />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
