@@ -43,9 +43,9 @@ public class TaskWidget extends ConstraintLayout implements View.OnClickListener
     @Override
     public void onClick(View v) {
         //go to timer screen
-        Intent intent = new Intent(getContext(), TimerActivity.class);
-        intent.putExtra("currentTask",task);
-        getContext().startActivity(intent);
+//        Intent intent = new Intent(getContext(), TimerActivity.class);
+//        intent.putExtra("currentTask",task);
+//        getContext().startActivity(intent);
 
     }
 }

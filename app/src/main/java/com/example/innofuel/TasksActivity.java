@@ -1,6 +1,7 @@
 package com.example.innofuel;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -78,17 +79,6 @@ public class TasksActivity extends BaseActivity {
             Button saveButton = addTaskDialogue.findViewById(R.id.saveButton);
 
             //set up number pickers
-//            NumberPicker np = (NumberPicker) findViewById(R.id.numberPicker1);
-//            String[] nums = new String[20];
-//            for(int i=0; i<nums.length; i++)
-//                nums[i] = Integer.toString(i);
-//
-//            np.setMinValue(1);
-//            np.setMaxValue(20);
-//            np.setWrapSelectorWheel(false);
-//            np.setDisplayedValues(nums);
-//            np.setValue(1);
-
             String[] hours = new String[10];
             for(int i=0; i<hours.length; i++) {
                hours[i] = Integer.toString(i);
@@ -153,10 +143,23 @@ public class TasksActivity extends BaseActivity {
     void refreshTasksList(){
         activeTasks = ActiveTasks.getInstance().getTaskList();
         tasksLinearLayout.removeAllViews();
+        TaskWidget taskWidget;
         for (Task task: activeTasks){
-            TaskWidget taskWidget = new TaskWidget(this, task);
+            taskWidget = new TaskWidget(this, task);
             tasksLinearLayout.addView(taskWidget);
+
+            TaskWidget finalTaskWidget = taskWidget;
+            taskWidget.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getBaseContext(), TimerActivity.class);
+                    intent.putExtra("currentTask", finalTaskWidget.task);
+                    startActivity(intent);
+                }
+            });
         }
+
+
 
     }
 
