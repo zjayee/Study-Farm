@@ -69,8 +69,6 @@ public class TasksActivity extends BaseActivity {
 
     void setupAddTaskButton(){
         addTaskButton.setOnClickListener(v ->{
-            //TODO: add task fragment
-
 
             final Dialog addTaskDialogue = new Dialog(this);
             addTaskDialogue.setContentView(R.layout.fragment_add_task);

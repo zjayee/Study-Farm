@@ -9,15 +9,6 @@
     >
 
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/linearlayout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:orientation="vertical"-->
-<!--        >-->
-
-
-<!--    </LinearLayout>-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -214,7 +205,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             app:mcv_arrowColor="@color/highlightcolour"
-            app:mcv_tileHeight="45dp"
+            app:mcv_tileHeight="40dp"
             app:mcv_headerTextAppearance="@style/thin_header_22"
             app:mcv_weekDayTextAppearance="@style/calendar_weekday"
             app:mcv_dateTextAppearance="@style/calendar_date"

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -12,6 +13,7 @@ import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -45,6 +47,7 @@ public class CalendarActivity extends BaseActivity {
     Button december;
 
     MaterialCalendarView calendarView;
+    LinearLayout eventsLinearLayout;
 
 
     @Override
@@ -53,7 +56,28 @@ public class CalendarActivity extends BaseActivity {
 //        setContentView(R.layout.activity_calendar);
 
         setUpViews();
-       // updateMonthsRadiobutton();
+
+
+
+    }
+
+    void refreshCalendarEvents(){
+        //get tasks with due date in month
+        //add tasks to linear layout
+        //add decorator to dates with tasks
+
+        //get tasks/events with date in month
+        int currentMonth = calendarView.getCurrentDate().getMonth();
+        int currentYear = calendarView.getCurrentDate().getYear();
+        ArrayList<Task> tasksInMonth = ActiveTasks.getInstance().getTasksInMonth(currentMonth,currentYear);
+
+        //add to linear layout
+        eventsLinearLayout.removeAllViews();
+        for (Task task: tasksInMonth){
+            CalendarTaskWidget calendarTaskWidget = new CalendarTaskWidget(this, task);
+            eventsLinearLayout.addView(calendarTaskWidget);
+
+        }
 
 
     }
@@ -87,13 +111,17 @@ public class CalendarActivity extends BaseActivity {
         november = findViewById(R.id.november);
         december = findViewById(R.id.december);
 
+        eventsLinearLayout = findViewById(R.id.eventsLinearLayout);
+
         calendarView.setCurrentDate(CalendarDay.today());
         updateMonthsRadiobutton(calendarView.getCurrentDate().getDate());
+        refreshCalendarEvents();
 
         calendarView.setOnMonthChangedListener(new OnMonthChangedListener() {
             @Override
             public void onMonthChanged(MaterialCalendarView widget, CalendarDay date) {
                 updateMonthsRadiobutton(date.getDate());
+                refreshCalendarEvents();
             }
         });
 
