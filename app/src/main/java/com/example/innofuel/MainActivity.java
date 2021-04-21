@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -85,14 +86,17 @@ public class MainActivity extends BaseActivity{
         quest2DescriptionTextview = findViewById(R.id.quest2DescriptionTextview);
         quest2CompletionTextview = findViewById(R.id.quest2CompletionTextview);
         questCard = findViewById(R.id.questCard);
+
+
     }
 
     void setupCalendarCard(){
         calendarCard.setOnClickListener(v -> {
-
             Intent intent = new Intent(getBaseContext(), CalendarActivity.class);
             startActivity(intent);
         });
+
+
     }
 
     void setupQuestCard(){

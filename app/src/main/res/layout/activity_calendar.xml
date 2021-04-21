@@ -38,6 +38,7 @@
 
         >
     <RadioGroup
+        android:id="@+id/selectedRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="30dp"
@@ -49,7 +50,7 @@
             android:layout_weight="1"
             android:button="@drawable/calendar_button"
             android:buttonTint="@color/highlightcolour"
-            android:checked="true"
+
             />
         <RadioButton
             android:id="@+id/febuaryButton"
@@ -110,7 +111,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:button="@drawable/calendar_button"
-
+            android:buttonTint="@color/highlightcolour"
             />
         <RadioButton
             android:id="@+id/septemberButton"
