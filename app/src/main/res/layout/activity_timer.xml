@@ -99,18 +99,18 @@
         style="@style/timer_text"
         />
 
-    <TextView
-        android:id="@+id/nextBreakTextview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/countdownTextview"
-        app:layout_constraintLeft_toLeftOf="@id/countdownTextview"
-        app:layout_constraintRight_toRightOf="@id/countdownTextview"
-        android:layout_marginTop="3dp"
-        android:text="Next Break: 12:05"
-        android:elevation="2dp"
-        style="@style/timer_small_text"
-        />
+<!--    <TextView-->
+<!--        android:id="@+id/nextBreakTextview"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/countdownTextview"-->
+<!--        app:layout_constraintLeft_toLeftOf="@id/countdownTextview"-->
+<!--        app:layout_constraintRight_toRightOf="@id/countdownTextview"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        android:text="Next Break: 12:05"-->
+<!--        android:elevation="2dp"-->
+<!--        style="@style/timer_small_text"-->
+<!--        />-->
 
     <Button
         android:id="@+id/finishTaskButton"

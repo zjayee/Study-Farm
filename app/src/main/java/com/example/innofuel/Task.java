@@ -4,6 +4,7 @@ import android.os.Parcelable;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 public class Task implements Comparable, Serializable {
 
@@ -87,6 +88,21 @@ public class Task implements Comparable, Serializable {
 
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Task task = (Task) o;
+        return name.equals(task.name) &&
+                dueDate.equals(task.dueDate) &&
+                timeNeeded.equals(task.timeNeeded);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, dueDate, timeNeeded);
+    }
 
     public int getDaysUntilDeadline(){
         //TODO: implement

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.mikhaellopez.circularprogressbar.CircularProgressBar;
@@ -22,16 +23,16 @@ public class TimerActivity extends AppCompatActivity {
     //views
     TextView taskNameTextview;
     TextView countdownTextview;
-    TextView nextBreakTextview;
     CircularProgressBar progressBar;
     Button finishTaskButton;
     Button pauseButton;
     Button cancelButton;
+    ImageButton backButton;
 
     //data
     Task currentTask;
     long millisLeft;
-    boolean isPaused = false;
+    boolean isPaused = true;
 
     //other
     MediaPlayer mp;
@@ -44,7 +45,6 @@ public class TimerActivity extends AppCompatActivity {
 
         getIntentInfo();
         setupViews();
-        startCountdown(TimeUnit.MINUTES.toMillis(30));
 
     }
 
@@ -57,12 +57,14 @@ public class TimerActivity extends AppCompatActivity {
     void setupViews(){
         taskNameTextview = findViewById(R.id.taskNameTextview);
         countdownTextview = findViewById(R.id.countdownTextview);
-        nextBreakTextview = findViewById(R.id.nextBreakTextview);
         progressBar = findViewById(R.id.progressBar);
         finishTaskButton = findViewById(R.id.finishTaskButton);
         pauseButton = findViewById(R.id.pauseButton);
         cancelButton = findViewById(R.id.cancelButton);
-
+        backButton = findViewById(R.id.backButton);
+        millisLeft = TimeUnit.MINUTES.toMillis(30);
+        countdownTextview.setText(R.string.timer_full30);
+        pauseButton.setText(R.string.start);
         taskNameTextview.setText(currentTask.getName());
         //TODO: set up timer initial time + break text
 
@@ -86,13 +88,26 @@ public class TimerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 countdownTimer.cancel();
+                countdownTextview.setText(R.string.timer_full30);
+                millisLeft = TimeUnit.MINUTES.toMillis(30);
+                pauseButton.setText(R.string.start);
+                isPaused=true;
             }
         });
 
         finishTaskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: set task as finished
+                ActiveTasks.getInstance().finishTask(currentTask);
+                finish();
+
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
@@ -109,7 +124,7 @@ public class TimerActivity extends AppCompatActivity {
                 millisLeft = millisUntilFinished;
 
                 long minutes = TimeUnit.MILLISECONDS.toMinutes(millisLeft);
-                long seconds = TimeUnit.MILLISECONDS.toSeconds(millisLeft);
+                long seconds = TimeUnit.MILLISECONDS.toSeconds(millisLeft)%60;
 
                 countdownTextview.setText(minutes+":"+seconds);
             }

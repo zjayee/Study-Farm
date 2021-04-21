@@ -36,9 +36,16 @@ public class TasksActivity extends BaseActivity {
 
         setupViews();
         setupAddTaskButton();
-        setupQuestsList();
+        refreshQuestsList();
         refreshTasksList();
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshTasksList();
+        refreshQuestsList();
     }
 
     @Override
@@ -163,11 +170,10 @@ public class TasksActivity extends BaseActivity {
 
     }
 
-    void setupQuestsList(){
-        //        QuestWidget questWidget = new QuestWidget(this, null, "quest name", " sfdg"," sdge","3/10");
-        //        LinearLayout linearLayout = findViewById(R.id.linearlayout);
-        //        linearLayout.addView(questWidget);
+    void refreshQuestsList(){
+
         activeQuests = ActiveQuests.getInstance().getQuestList();
+        questsLinearLayout.removeAllViews();;
 
         for (Quest quest: activeQuests){
             QuestWidget questWidget = new QuestWidget(this, quest);

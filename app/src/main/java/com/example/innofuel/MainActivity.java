@@ -60,7 +60,7 @@ public class MainActivity extends BaseActivity{
         setupCalendarCard();
         setupQuestCard();
         setupDate();
-        //setupReminder();
+        setupReminder();
         setupSuggestedQuests();
 
     }
@@ -156,6 +156,10 @@ public class MainActivity extends BaseActivity{
 
     void setupReminder(){
         tasks = ActiveTasks.getInstance().getTaskList();
+        if(tasks.size()<1){
+            reminderCard.setVisibility(View.GONE);
+            return;
+        }
         Task task = tasks.get(reminderIndex);
         String taskName = task.getName();
 
