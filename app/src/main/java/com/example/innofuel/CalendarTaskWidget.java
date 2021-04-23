@@ -33,7 +33,7 @@ public class CalendarTaskWidget extends FrameLayout implements View.OnClickListe
 
         //set date
         Date date = task.getDueDate();
-        String monthString  = (String) DateFormat.format("L",  date);
+        String monthString  = (String) DateFormat.format("MMM",  date);
         String dayString = (String) DateFormat.format("dd",   date);
         String dateString = monthString+" "+dayString;
         dateTextview.setText(dateString);

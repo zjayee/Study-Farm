@@ -1,7 +1,5 @@
 package com.example.innofuel;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class RewardsActivity extends BaseActivity {
@@ -19,6 +17,6 @@ public class RewardsActivity extends BaseActivity {
 
     @Override
     int getBottomNavigationMenuItemId() {
-        return R.id.rewards;
+        return R.id.game;
     }
 }

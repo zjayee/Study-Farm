@@ -2,6 +2,7 @@ package com.example.innofuel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.widget.Button;
@@ -10,12 +11,17 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.DayViewDecorator;
+import com.prolificinteractive.materialcalendarview.DayViewFacade;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
+import com.prolificinteractive.materialcalendarview.spans.DotSpan;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 
 public class CalendarActivity extends BaseActivity {
 
@@ -48,6 +54,8 @@ public class CalendarActivity extends BaseActivity {
 
     MaterialCalendarView calendarView;
     LinearLayout eventsLinearLayout;
+    ArrayList<Task> tasksInMonth;
+    ArrayList<CalendarDay> datesWTasks = new ArrayList<>();
 
 
     @Override
@@ -56,7 +64,7 @@ public class CalendarActivity extends BaseActivity {
 //        setContentView(R.layout.activity_calendar);
 
         setUpViews();
-
+        refreshCalendarEvents();
 
 
     }
@@ -69,18 +77,45 @@ public class CalendarActivity extends BaseActivity {
         //get tasks/events with date in month
         int currentMonth = calendarView.getCurrentDate().getMonth();
         int currentYear = calendarView.getCurrentDate().getYear();
-        ArrayList<Task> tasksInMonth = ActiveTasks.getInstance().getTasksInMonth(currentMonth,currentYear);
+        tasksInMonth = ActiveTasks.getInstance().getTasksInMonth(currentMonth,currentYear);
 
         //add to linear layout
         eventsLinearLayout.removeAllViews();
         for (Task task: tasksInMonth){
             CalendarTaskWidget calendarTaskWidget = new CalendarTaskWidget(this, task);
             eventsLinearLayout.addView(calendarTaskWidget);
+            datesWTasks.add(CalendarDay.from(task.getDueDate()));
+        }
 
+        if(datesWTasks!=null) {
+            EventDecorator eventDecorator = new EventDecorator(Color.parseColor("#B7D0B0"), datesWTasks);
+            calendarView.addDecorator(eventDecorator);
         }
 
 
     }
+
+    public class EventDecorator implements DayViewDecorator {
+
+        private final int color;
+        private final HashSet<CalendarDay> dates;
+
+        public EventDecorator(int color, Collection<CalendarDay> dates) {
+            this.color = color;
+            this.dates = new HashSet<>(dates);
+        }
+
+        @Override
+        public boolean shouldDecorate(CalendarDay day) {
+            return dates.contains(day);
+        }
+
+        @Override
+        public void decorate(DayViewFacade view) {
+            view.addSpan(new DotSpan(10, color));
+        }
+    }
+
 
     void setUpViews() {
         selectedRadioGroup = findViewById(R.id.selectedRadioGroup);

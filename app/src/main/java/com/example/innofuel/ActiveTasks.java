@@ -33,6 +33,7 @@ public class ActiveTasks {
     public ArrayList<Task> getTasksInMonth(int m, int y){
 
         ArrayList<Task> tasksInMonth = new ArrayList<>();
+        m++;
 
         for(Task task: taskList){
             Date dueDate = task.getDueDate();
@@ -41,7 +42,7 @@ public class ActiveTasks {
 
             if(dueM==m && dueY == y){
                 tasksInMonth.add(task);
-            }else if(dueM>m){
+            }else if(dueM<m){
                 break;
             }
         }

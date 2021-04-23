@@ -21,9 +21,9 @@
         android:icon="@drawable/ic_task"
         android:title="task"/>
     <item
-        android:id="@+id/rewards"
+        android:id="@+id/game"
         android:enabled="true"
-        android:icon="@drawable/ic_reward"
-        android:title="rewards"/>
+        android:icon="@drawable/ic_game"
+        android:title="game" />
 
 </menu>
