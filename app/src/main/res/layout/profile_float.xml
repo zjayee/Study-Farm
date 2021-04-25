@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profileCard"
+        android:layout_width="202dp"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toTopOf="@id/pfpCard"
+        app:layout_constraintBottom_toBottomOf="@id/pfpCard"
+        app:layout_constraintLeft_toLeftOf="@id/pfpCard"
+        app:cardElevation="0dp"
+        android:layout_marginLeft="50dp"
+        app:cardCornerRadius="20dp"
+        >
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="8dp"
+            android:progress="50"
+            android:progressTint="@color/highlightcolour"
+            android:progressBackgroundTint="@color/greycard"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/myProfileTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/profileCard"
+        app:layout_constraintLeft_toRightOf="@id/pfpCard"
+        android:text="@string/my_profile"
+        style="@style/description_text_20"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/levelTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/myProfileTextview"
+        app:layout_constraintLeft_toLeftOf="@id/myProfileTextview"
+        android:text="LVL 4"
+        style="@style/semibold_text_13"
+        android:layout_marginTop="3dp"
+        />
+
+    <ImageView
+        android:id="@+id/coinIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/levelTextview"
+        app:layout_constraintLeft_toRightOf="@id/levelTextview"
+        android:src="@drawable/ic_coin"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/coinNumTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/coinIcon"
+        app:layout_constraintLeft_toRightOf="@id/coinIcon"
+        android:layout_marginLeft="3dp"
+        android:text="x5"
+        style="@style/semibold_text_13_green"
+        />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pfpCard"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:cardCornerRadius="45dp"
+        app:cardElevation="0dp"
+        >
+        <ImageView
+            android:id="@+id/pfpImageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/highlightcolour"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

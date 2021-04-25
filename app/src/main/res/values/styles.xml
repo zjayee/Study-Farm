@@ -91,6 +91,20 @@
 
     </style>
 
+    <style name="semibold_text_13">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/textdark1</item>
+        <item name="android:textSize">13sp</item>
+
+    </style>
+
+    <style name="semibold_text_13_green">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/icongreen</item>
+        <item name="android:textSize">13sp</item>
+
+    </style>
+
 
 
     <style name="button_small">

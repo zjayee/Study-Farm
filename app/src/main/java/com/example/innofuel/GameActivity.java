@@ -2,7 +2,7 @@ package com.example.innofuel;
 
 import android.os.Bundle;
 
-public class RewardsActivity extends BaseActivity {
+public class GameActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -12,7 +12,7 @@ public class RewardsActivity extends BaseActivity {
 
     @Override
     int getLayoutId() {
-        return R.layout.activity_rewards;
+        return R.layout.activity_game;
     }
 
     @Override
