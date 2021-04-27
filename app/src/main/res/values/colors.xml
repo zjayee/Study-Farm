@@ -26,5 +26,7 @@
     <color name="dividergreen">#E8F5E4</color>
     <color name="fabicon">#939CB2</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="translucentwhite">#CCFFFFFF</color>
+    <color name="translucentgreen">#CCBED4B6</color>
 
 </resources>

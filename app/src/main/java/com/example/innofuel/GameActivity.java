@@ -1,13 +1,21 @@
 package com.example.innofuel;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class GameActivity extends BaseActivity {
+
+    BottomNavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_rewards);
+        navigationView = findViewById(R.id.navigation);
+        navigationView.setBackgroundColor(Color.parseColor("##CCFFFFFF"));
+
     }
 
     @Override

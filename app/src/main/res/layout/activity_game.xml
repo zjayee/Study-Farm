@@ -35,6 +35,90 @@
         app:layout_constraintBottom_toBottomOf="parent"
         />
 
+    <Button
+        android:id="@+id/editFarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintLeft_toLeftOf="@id/navigation"
+        android:layout_marginLeft="17dp"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="@color/greycard"
+        style="@style/edit_farm_button"
+        android:text="@string/edit_farm"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/getNewItemCard"
+        android:layout_width="186dp"
+        android:layout_height="86dp"
+        app:layout_constraintBottom_toTopOf="@id/editFarmButton"
+        app:layout_constraintLeft_toLeftOf="@id/editFarmButton"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/translucentgreen"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/get_new_item"
+            android:layout_marginTop="15dp"
+            style="@style/small_header_text_white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:text="@string/spend_5_coins"
+            android:textAllCaps="true"
+            style="@style/white_text_13"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/house"
+        android:layout_marginBottom="485dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <ImageView
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/plant"
+        android:layout_marginBottom="410dp"
+        android:layout_marginLeft="145dp"
+        />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/cow_pen"
+        android:layout_marginBottom="165dp"
+        android:layout_marginLeft="145dp"
+        />
+
+    <ImageView
+        android:id="@+id/farm1l2b"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@color/transparent"
+        android:layout_marginBottom="260dp"
+        android:layout_marginLeft="40dp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
