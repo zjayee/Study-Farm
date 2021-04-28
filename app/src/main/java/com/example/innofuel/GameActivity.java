@@ -14,7 +14,7 @@ public class GameActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_rewards);
         navigationView = findViewById(R.id.navigation);
-        navigationView.setBackgroundColor(Color.parseColor("##CCFFFFFF"));
+        navigationView.setBackgroundColor(getResources().getColor(R.color.translucentgreen,null));
 
     }
 

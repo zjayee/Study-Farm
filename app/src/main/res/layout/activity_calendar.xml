@@ -337,7 +337,7 @@
             android:layout_marginLeft="70dp"
             app:mcv_tileHeight="45dp"
             app:mcv_arrowColor="@color/transparent"
-            app:mcv_headerTextAppearance="@style/thin_header_text_green_20"
+            app:mcv_headerTextAppearance="@style/small_header_text"
             app:mcv_weekDayTextAppearance="@style/calendar_weekday"
             app:mcv_dateTextAppearance="@style/calendar_date"
             />

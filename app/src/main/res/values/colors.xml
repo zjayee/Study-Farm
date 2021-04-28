@@ -8,20 +8,21 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="textdark1">#4E4E4E</color>
-    <color name="textdark2">#454545</color>
-    <color name="textlight1">#94979E</color>
+    <color name="textdark1">#393939</color>
+    <color name="textdark2">#3E3E3E</color>
+    <color name="textlight1">#81848A</color>
     <color name="textlight2">#C7C7C7</color>
-    <color name="textgreen">#8A9A86</color>
+    <color name="textgreen">#424C40</color>
 
     <color name="greycard">#E4EAE3</color>
     <color name="lightgreybackground">#F4F4F4</color>
 
 
-    <color name="highlightcolour">#B7D0B0</color>
-    <color name="darkgreen">#A2AD9F</color>
-    <color name="menuselectedgreen">#81937D</color>
-    <color name="icongreen">#BACAB6</color>
+    <color name="highlightcolour">#A1D894</color>
+    <color name="statusbarcolour">#B3CDAD</color>
+    <color name="darkgreen">#7F9579</color>
+    <color name="menuselectedgreen">#5B6A58</color>
+    <color name="icongreen">#9DB398</color>
     <color name="checkboxgreen">#A6BBA0</color>
     <color name="dividergreen">#E8F5E4</color>
     <color name="fabicon">#939CB2</color>

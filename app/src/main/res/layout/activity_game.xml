@@ -85,7 +85,7 @@
         app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintLeft_toLeftOf="parent"
         android:src="@drawable/house"
-        android:layout_marginBottom="485dp"
+        android:layout_marginBottom="425dp"
         android:layout_marginLeft="30dp"
         />
 
@@ -95,8 +95,8 @@
         app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintLeft_toLeftOf="parent"
         android:src="@drawable/plant"
-        android:layout_marginBottom="410dp"
-        android:layout_marginLeft="145dp"
+        android:layout_marginBottom="350dp"
+        android:layout_marginLeft="140dp"
         />
 
     <ImageView
@@ -105,19 +105,20 @@
         app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintLeft_toLeftOf="parent"
         android:src="@drawable/cow_pen"
-        android:layout_marginBottom="165dp"
+        android:layout_marginBottom="145dp"
         android:layout_marginLeft="145dp"
         />
 
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/farm1l2b"
-        android:layout_width="175dp"
+        android:layout_width="185dp"
         android:layout_height="175dp"
         app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:src="@color/transparent"
-        android:layout_marginBottom="260dp"
-        android:layout_marginLeft="40dp"
+        android:src="@drawable/cow_ufo_gif"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="220dp"
+        android:layout_marginLeft="35dp"
         />
 
 
