@@ -24,7 +24,7 @@
         />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/timerCard"
+        android:id="@+id/gatchaCard"
         android:layout_marginTop="60dp"
         android:layout_marginBottom="70dp"
         android:layout_width="match_parent"
@@ -34,6 +34,7 @@
         >
 
         <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gatchaMachineGif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
@@ -62,12 +63,14 @@
             />
 
         <TextView
+            android:id="@+id/spendCoinTextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/click_to_spend_5_coins"
-            android:layout_marginTop="590dp"
+            android:layout_marginTop="510dp"
             style="@style/text_24"
+            android:padding="50dp"
             />
 
     </androidx.cardview.widget.CardView>
