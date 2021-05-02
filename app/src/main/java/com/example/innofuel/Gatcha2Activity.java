@@ -33,6 +33,7 @@ public class Gatcha2Activity extends AppCompatActivity {
         tapToContinueTextview = findViewById(R.id.continueTextview);
         ratingBar = findViewById(R.id.ratingBar);
         objectNameTextview = findViewById(R.id.objectNameTextview);
+        backButton = findViewById(R.id.backButton);
 
 
         tapToContinueTextview.setOnClickListener(new View.OnClickListener() {

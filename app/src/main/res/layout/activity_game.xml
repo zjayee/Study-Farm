@@ -102,14 +102,14 @@
         android:layout_marginLeft="145dp"
         />
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:src="@drawable/cow_pen"
-        android:layout_marginBottom="145dp"
-        android:layout_marginLeft="145dp"
+        android:src="@drawable/cow_pen_gif"
+        android:layout_marginBottom="120dp"
+        android:layout_marginLeft="105dp"
         />
 
     <pl.droidsonroids.gif.GifImageView
@@ -118,11 +118,10 @@
         android:layout_height="175dp"
         app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:src="@drawable/cow_ufo_gif"
+        android:src="@color/transparent"
         android:scaleType="centerCrop"
         android:layout_marginBottom="220dp"
         android:layout_marginLeft="35dp"
-        android:visibility="invisible"
         />
 
     <include

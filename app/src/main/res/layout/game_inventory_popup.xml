@@ -70,6 +70,7 @@
             />
 
         <ImageView
+            android:id="@+id/cowUfo"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/cow_ufo"
