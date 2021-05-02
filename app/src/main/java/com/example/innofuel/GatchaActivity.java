@@ -3,7 +3,11 @@ package com.example.innofuel;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -18,6 +22,7 @@ public class GatchaActivity extends AppCompatActivity {
     GifImageView gatchaMachineGif;
     CardView gatchaCard;
     TextView spendCoinTextview;
+    TextView coinNumTextview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +40,39 @@ public class GatchaActivity extends AppCompatActivity {
         gatchaMachineGif = findViewById(R.id.gatchaMachineGif);
         gatchaCard = findViewById(R.id.gatchaCard);
         spendCoinTextview = findViewById(R.id.spendCoinTextview);
+        coinNumTextview = findViewById(R.id.coinNumTextview);
+
+        coinNumTextview.setText("x"+Inventory.getCoins());
+
 
         ((GifDrawable)gatchaMachineGif.getDrawable()).stop();
+
+
 
 
 
         spendCoinTextview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((GifDrawable)gatchaMachineGif.getDrawable()).start();
-                ((GifDrawable)gatchaMachineGif.getDrawable()).setLoopCount(1);
-                
+
+
+                if(Inventory.runGatcha()) {
+                    ((GifDrawable) gatchaMachineGif.getDrawable()).start();
+                    ((GifDrawable) gatchaMachineGif.getDrawable()).setLoopCount(1);
+
+
+                    new CountDownTimer(4000, 1000) {
+                        @Override
+                        public void onTick(long arg0) {
+                        }
+
+                        @Override
+                        public void onFinish() {
+                            Intent intent = new Intent(getBaseContext(), Gatcha2Activity.class);
+                            startActivity(intent);
+                        }
+                    }.start();
+                }
             }
         });
 

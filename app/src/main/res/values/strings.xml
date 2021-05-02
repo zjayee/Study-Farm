@@ -32,6 +32,9 @@
     <string name="get_new_item">Get New Item</string>
     <string name="spend_5_coins">Spend 5 coins</string>
     <string name="click_to_spend_5_coins">Click to spend 5 coins</string>
+    <string name="you_ve_received">You have received…</string>
+    <string name="inventory">inventory</string>
+    <string name="placed_items">placed items</string>
 
 
 </resources>

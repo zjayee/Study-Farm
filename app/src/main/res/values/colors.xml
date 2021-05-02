@@ -18,7 +18,7 @@
     <color name="lightgreybackground">#F4F4F4</color>
 
 
-    <color name="highlightcolour">#A1D894</color>
+    <color name="highlightcolour">#B7DAAF</color>
     <color name="statusbarcolour">#B3CDAD</color>
     <color name="darkgreen">#7F9579</color>
     <color name="menuselectedgreen">#5B6A58</color>
@@ -29,5 +29,6 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="translucentwhite">#CCFFFFFF</color>
     <color name="translucentgreen">#CCBED4B6</color>
+    <color name="yellow">#FFE28B</color>
 
 </resources>

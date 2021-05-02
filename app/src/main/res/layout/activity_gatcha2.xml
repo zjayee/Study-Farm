@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GatchaActivity"
+    android:background="@color/lightgreybackground"
+    >
+
+
+
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_back_button"
+        android:background="@drawable/transparent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/gatchaCard"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="25dp"
+        android:elevation="10dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_ve_received"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            style="@style/text_24"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="95dp"
+            android:src="@color/dividergreen"
+            android:scaleType="fitXY"
+            />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gameItemGif"
+            android:layout_width="wrap_content"
+            android:layout_height="600dp"
+            android:src="@drawable/cow_ufo_gif"
+            android:layout_marginTop="20dp"
+            />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="440dp"
+            android:background="@color/transparent"
+            android:secondaryProgressTint="@color/transparent"
+            android:progressTint="@color/yellow"
+            android:numStars="4"
+            android:rating="4"
+            />
+
+        <TextView
+            android:id="@+id/objectNameTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="495dp"
+            android:text="UFO"
+            android:textAllCaps="true"
+            style="@style/semibold_64_green"
+            />
+
+        <TextView
+            android:id="@+id/continueTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Tap to Continue"
+            android:layout_marginTop="565dp"
+            style="@style/thin_header_text_green_18"
+            android:paddingVertical="30dp"
+            android:paddingHorizontal="70dp"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

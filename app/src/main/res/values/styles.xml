@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="semibold_64_green">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/menuselectedgreen</item>
+        <item name="android:textSize">64sp</item>
+    </style>
+
     <style name="small_header_text">
         <item name="android:fontFamily">@font/open_sans_semibold</item>
         <item name="android:textColor">@color/textdark1</item>

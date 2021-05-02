@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 
@@ -19,6 +20,8 @@ public class GameActivity extends BaseActivity {
     Button editFarmButton;
     CardView getNewItemCard;
     GifImageView farm1l2b;
+    View profileFloat;
+    TextView coinNumTextview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,11 @@ public class GameActivity extends BaseActivity {
         editFarmButton = findViewById(R.id.editFarmButton);
         getNewItemCard = findViewById(R.id.getNewItemCard);
         farm1l2b = findViewById(R.id.farm1l2b);
+        profileFloat = findViewById(R.id.profileFloat);
+        coinNumTextview = profileFloat.findViewById(R.id.coinNumTextview);
+
+
+        coinNumTextview.setText("x"+Inventory.getCoins());
 
         getNewItemCard.setOnClickListener(new View.OnClickListener() {
             @Override
