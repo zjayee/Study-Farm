@@ -125,9 +125,10 @@ public class TimerActivity extends AppCompatActivity {
 
                 long minutes = TimeUnit.MILLISECONDS.toMinutes(millisLeft);
                 long seconds = TimeUnit.MILLISECONDS.toSeconds(millisLeft)%60;
+                String secondsString = String.format("%02d", seconds);
 
                 progressBar.setProgress(((float)millisLeft/TimeUnit.MINUTES.toMillis(30)*100));
-                countdownTextview.setText(minutes+":"+seconds);
+                countdownTextview.setText(minutes+":"+secondsString);
             }
 
             public void onFinish() {
