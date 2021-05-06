@@ -60,7 +60,7 @@
                 android:layout_marginRight="18dp"
                 android:background="@drawable/ic_edittexttitlebackground"
                 android:paddingLeft="15dp"
-                style="@style/thin_header_text_light2"
+                style="@style/thin_header_text_light1"
                 />
 
             <TextView

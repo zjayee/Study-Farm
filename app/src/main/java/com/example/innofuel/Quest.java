@@ -133,7 +133,7 @@ public class Quest {
         add(new Quest("Plant some seeds","Study for 3 consecutive days", 3, coin2vegetable1R));
         add(new Quest("Buy from the local market","Spend 5 coins", 5, coin2R));
         add(new Quest("Milk the cows","Complete 1 task", 1, coin2R));
-        add(new Quest("Update your to-do list","Add 2 new tasks", 5, coin3R));
+        add(new Quest("Update your to-do list","Add 2 new tasks", 2, coin3R));
     }};
 
 }

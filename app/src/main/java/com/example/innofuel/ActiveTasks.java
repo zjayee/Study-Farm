@@ -42,7 +42,7 @@ public class ActiveTasks {
 
             if(dueM==m && dueY == y){
                 tasksInMonth.add(task);
-            }else if(dueM<m){
+            }else if(dueM>m){
                 break;
             }
         }

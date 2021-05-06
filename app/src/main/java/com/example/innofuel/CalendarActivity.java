@@ -69,6 +69,12 @@ public class CalendarActivity extends BaseActivity {
 
     }
 
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        refreshCalendarEvents();
+//    }
+
     void refreshCalendarEvents(){
         //get tasks with due date in month
         //add tasks to linear layout
