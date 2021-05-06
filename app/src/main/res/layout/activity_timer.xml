@@ -60,7 +60,7 @@
         app:cpb_progress_direction="to_right"
         app:cpb_progressbar_width="7dp"
         app:cpb_progressbar_color="@color/highlightcolour"
-        app:cpb_progress="50"
+        app:cpb_progress="100"
         />
 
     <TextView
