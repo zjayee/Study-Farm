@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 
 import java.text.SimpleDateFormat;
@@ -23,8 +25,15 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends BaseActivity{
-
     //Views
+    SharedPreferences mPrefs;
+    void getData(){
+        Gson gson = new Gson();
+        String json = mPrefs.getString("ActiveTaskList", null);
+        if (json!=null){
+            ActiveTasks.getInstance().setTaskList(gson.fromJson(json, ArrayList.class));
+        }
+    }
 
     TextView quoteTextview;
     TextView quoteSourceTextview;
@@ -50,12 +59,14 @@ public class MainActivity extends BaseActivity{
     ArrayList<Task> tasks;
     ArrayList<Quest> quests;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //       setContentView(R.layout.activity_main);
 
-
+        mPrefs = getPreferences(MODE_PRIVATE);
 
         setupViews();
         setupCalendarCard();
@@ -63,6 +74,7 @@ public class MainActivity extends BaseActivity{
         setupDate();
         setupReminder();
         setupSuggestedQuests();
+        getData();
 
     }
 

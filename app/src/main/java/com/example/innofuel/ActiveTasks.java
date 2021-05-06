@@ -61,4 +61,8 @@ public class ActiveTasks {
         return taskList;
     }
 
+    public void setTaskList( ArrayList<Task> taskList){
+        this.taskList = taskList;
+    }
+
 }

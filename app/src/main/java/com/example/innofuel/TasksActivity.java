@@ -2,6 +2,7 @@ package com.example.innofuel;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.gson.Gson;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -21,6 +23,18 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class TasksActivity extends BaseActivity {
+    SharedPreferences mPrefs;
+
+    void saveData(){
+        SharedPreferences.Editor prefsEditor = mPrefs.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(ActiveTasks.getInstance().getTaskList());
+        prefsEditor.putString("ActiveTaskList", json);
+        prefsEditor.apply();
+    }
+
+
+
 
     FloatingActionButton addTaskButton;
     LinearLayout tasksLinearLayout;
@@ -33,6 +47,7 @@ public class TasksActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_tasks);
+        mPrefs = getPreferences(MODE_PRIVATE);
 
         setupViews();
         setupAddTaskButton();
@@ -122,6 +137,7 @@ public class TasksActivity extends BaseActivity {
                         date = formatter.parse(dateString);
                         Task newTask = new Task(title, date, timeNeeded);
                         ActiveTasks.getInstance().addTask(newTask);
+                        saveData();
                         refreshTasksList();
                         addTaskDialogue.dismiss();
                     } catch (ParseException e) {

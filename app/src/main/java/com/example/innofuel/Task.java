@@ -1,10 +1,13 @@
 package com.example.innofuel;
 
+import android.content.SharedPreferences;
 import android.os.Parcelable;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class Task implements Comparable, Serializable {
 
