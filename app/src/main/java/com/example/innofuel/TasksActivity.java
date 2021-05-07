@@ -92,12 +92,12 @@ public class TasksActivity extends BaseActivity {
             hourNumberPicker.setMaxValue(9);
             hourNumberPicker.setDisplayedValues(hours);
 
-            String[] minutes = new String[60];
-            for(int i=0; i<minutes.length; i++) {
-                minutes[i] = Integer.toString(i);
-            }
+            String[] minutes = new String[]{"0", "15", "30", "45"};
+//            for(int i=0; i<minutes.length; i+=15) {
+//                minutes[i] = Integer.toString(i);
+//            }
             minuteNumberPicker.setMinValue(0);
-            minuteNumberPicker.setMaxValue(59);
+            minuteNumberPicker.setMaxValue(3);
             minuteNumberPicker.setDisplayedValues(minutes);
 
 
@@ -114,7 +114,7 @@ public class TasksActivity extends BaseActivity {
 
                     title = titleEditText.getText().toString();
                     hour = hourNumberPicker.getValue();
-                    minute = minuteNumberPicker.getValue();
+                    minute = minuteNumberPicker.getValue()*15;
                     timeNeeded = hour*60 + minute;
 
                     try {

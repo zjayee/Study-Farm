@@ -61,7 +61,7 @@ public class GatchaActivity extends AppCompatActivity {
                     ((GifDrawable) gatchaMachineGif.getDrawable()).setLoopCount(1);
 
 
-                    new CountDownTimer(4000, 1000) {
+                    new CountDownTimer(5000, 1000) {
                         @Override
                         public void onTick(long arg0) {
                         }
