@@ -73,6 +73,17 @@
             android:padding="50dp"
             />
 
+        <TextView
+            android:id="@+id/noCoinTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="600dp"
+            android:text="@string/no_coins"
+            android:layout_gravity="center_horizontal"
+            style="@style/description_text_16"
+            android:visibility="invisible"
+            />
+
     </androidx.cardview.widget.CardView>
 
 

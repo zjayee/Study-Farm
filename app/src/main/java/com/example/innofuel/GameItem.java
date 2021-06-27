@@ -8,27 +8,30 @@ public class GameItem {
     String name;
     int image;
     boolean placed = false;
-    boolean owned = false;
 
     GameItem (String name, int image){
         this.name = name;
         this.image = image;
     }
 
-    private static ArrayList<GameItem> GameItemList = new ArrayList<GameItem>(){{
-        GameItemList.add(new GameItem("cow_ufo", R.drawable.cow_ufo_gif));
-        GameItemList.add(new GameItem("cow_pen", R.drawable.cow_pen));
-        GameItemList.add(new GameItem("plant", R.drawable.plant));
-        GameItemList.add(new GameItem("house", R.drawable.house));
+    private static final ArrayList<GameItem> GAME_ITEMS = new ArrayList<GameItem>(){{
+        GAME_ITEMS.add(new GameItem("cow_ufo", R.drawable.cow_ufo_gif));
+        GAME_ITEMS.add(new GameItem("cow_pen", R.drawable.cow_pen));
+        GAME_ITEMS.add(new GameItem("plant", R.drawable.plant));
+        GAME_ITEMS.add(new GameItem("house", R.drawable.house));
     }};
 
-    public static ArrayList<GameItem> getGameItemList() {
-        return GameItemList;
+    public static ArrayList<GameItem> getGameItems() {
+        return GAME_ITEMS;
     }
 
     public static GameItem getRandomItem(){
-        int randomNum = (int)(Math.random()*GameItemList.size());
-        return GameItemList.get(randomNum);
+        int randomNum = (int)(Math.random()* GAME_ITEMS.size());
+        return GAME_ITEMS.get(randomNum);
+    }
+
+    public boolean isPlaced(){
+        return placed;
     }
 
     @Override
@@ -38,12 +41,11 @@ public class GameItem {
         GameItem gameItem = (GameItem) o;
         return image == gameItem.image &&
                 placed == gameItem.placed &&
-                owned == gameItem.owned &&
                 name.equals(gameItem.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, image, placed, owned);
+        return Objects.hash(name, image, placed);
     }
 }

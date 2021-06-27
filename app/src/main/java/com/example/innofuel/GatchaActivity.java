@@ -23,6 +23,7 @@ public class GatchaActivity extends AppCompatActivity {
     CardView gatchaCard;
     TextView spendCoinTextview;
     TextView coinNumTextview;
+    TextView noCoinTextview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class GatchaActivity extends AppCompatActivity {
         gatchaCard = findViewById(R.id.gatchaCard);
         spendCoinTextview = findViewById(R.id.spendCoinTextview);
         coinNumTextview = findViewById(R.id.coinNumTextview);
+        noCoinTextview = findViewById(R.id.noCoinTextview);
 
         coinNumTextview.setText("x"+Inventory.getCoins());
 
@@ -72,6 +74,8 @@ public class GatchaActivity extends AppCompatActivity {
                             startActivity(intent);
                         }
                     }.start();
+                }else{
+                    noCoinTextview.setVisibility(View.VISIBLE);
                 }
             }
         });

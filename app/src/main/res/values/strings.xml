@@ -35,6 +35,7 @@
     <string name="you_ve_received">You have received…</string>
     <string name="inventory">inventory</string>
     <string name="placed_items">placed items</string>
+    <string name="no_coins">You do not have enough coins</string>
 
 
 </resources>

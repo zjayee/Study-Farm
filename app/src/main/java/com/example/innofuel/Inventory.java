@@ -1,15 +1,19 @@
 package com.example.innofuel;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Inventory {
 
-    private static ArrayList<GameItem> ownedItemList;
-    private static ArrayList<GameItem> placedItemList;
-    private static ArrayList<GameItem> notPlacedItemList;
+    private static ArrayList<GameItem> ownedItemList = new ArrayList<>();
+    private static HashMap<GameItem, Integer> itemNumbers = new HashMap<GameItem, Integer>(){{
+        for(GameItem item : GameItem.getGameItems()){
+            itemNumbers.put(item, 0); //initializes all items with inital value of zero
+        }
+    }
+    };
 
-    //for demo use coins starts at 5
-    private static Integer coins = 5;
+    private static Integer coins = 0;
 
     private Inventory(){
 
@@ -20,8 +24,36 @@ public class Inventory {
         return ownedItemList;
     }
 
+    public static ArrayList<GameItem> getPlacedItems(){
+        ArrayList<GameItem> placedItems = new ArrayList<>();
+
+        for(GameItem item: ownedItemList){
+            if(item.isPlaced()){
+                placedItems.add(item);
+            }
+        }
+
+        return placedItems;
+    }
+
+    public static ArrayList<GameItem> getNotPlacedItems(){
+        ArrayList<GameItem> notPlacedItems = new ArrayList<>();
+
+        for(GameItem item: ownedItemList){
+            if(!item.isPlaced()){
+                notPlacedItems.add(item);
+            }
+        }
+
+        return notPlacedItems;
+    }
+
     public static void addToInventory(GameItem item){
         ownedItemList.add(item);
+        if(itemNumbers.containsKey(item)){
+            int oldValue = itemNumbers.get(item);
+            itemNumbers.replace(item, oldValue, oldValue+1);
+        }
     }
 
     public static void removeFromInventory(GameItem item){
