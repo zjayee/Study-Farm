@@ -6,14 +6,16 @@ import java.util.HashMap;
 public class Inventory {
 
     private static ArrayList<GameItem> ownedItemList = new ArrayList<>();
-    private static HashMap<GameItem, Integer> itemNumbers = new HashMap<GameItem, Integer>(){{
+    private static HashMap<GameItem, Integer> itemNumbers;
+
+    public static void setupInventory(){
+        itemNumbers = new HashMap<GameItem, Integer>();
         for(GameItem item : GameItem.getGameItems()){
             itemNumbers.put(item, 0); //initializes all items with inital value of zero
         }
     }
-    };
 
-    private static Integer coins = 0;
+    private static Integer coins = 5;
 
     private Inventory(){
 

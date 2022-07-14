@@ -14,12 +14,15 @@ public class GameItem {
         this.image = image;
     }
 
-    private static final ArrayList<GameItem> GAME_ITEMS = new ArrayList<GameItem>(){{
+    private static ArrayList<GameItem> GAME_ITEMS;
+
+    public static void setGameItems(){
+        GAME_ITEMS = new ArrayList<GameItem>();
         GAME_ITEMS.add(new GameItem("cow_ufo", R.drawable.cow_ufo_gif));
         GAME_ITEMS.add(new GameItem("cow_pen", R.drawable.cow_pen));
         GAME_ITEMS.add(new GameItem("plant", R.drawable.plant));
         GAME_ITEMS.add(new GameItem("house", R.drawable.house));
-    }};
+    }
 
     public static ArrayList<GameItem> getGameItems() {
         return GAME_ITEMS;
